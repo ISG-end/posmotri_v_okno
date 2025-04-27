@@ -40,8 +40,15 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-  padding-top: 133px;
-  gap: 40px;
+  padding-top: 43px;
+  gap: 30px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 5px;
 }
 
 .result__video-container {
@@ -51,16 +58,37 @@ ol {
 .result__video {
   width: 711px;
   height: 386px;
+  object-fit: cover;
 }
 
 .content__list {
-  height: 438px;
+  position: relative;
+  background-size: cover;
+  box-sizing: border-box;
+  min-width: 399px;
+  max-height: 320px;
+  min-height: 320px;
+  padding-right: 0px;
   overflow-y: auto;
 }
 
+.content__list::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.content__list::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.content__list::-webkit-scrollbar-thumb {
+  background-color: black; 
+  border-radius: 4px; 
+  border: none;
+}
+
+
 .search-form {
   display: flex;
-  justify-content: ;
   gap: 43px;
 }
 
@@ -73,7 +101,7 @@ ol {
   font-size: 18px;
   width: 225px;
   height: 27px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .search-form__fieldset-title {
@@ -90,9 +118,11 @@ ol {
 }
 
 .search-form__submit-button {
-  margin-top: 36px;
+  margin-left: 14px;
+  margin-top: 16px;
   width: 194px;
   height: 34px;
+
 }
 
 .button {
@@ -102,4 +132,57 @@ ol {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 800;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;  
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+
+
+.content__accent::after {
+  content: '-';
+  display: inline-block;
+  transform: translateY(-10%);
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  margin-top: 28px;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  width: 200px;
+}
+.more-button {
+  margin-top: 30px;
+  width: 399px;
+  height: 34px;
 }
