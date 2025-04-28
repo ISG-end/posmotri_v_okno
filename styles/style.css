@@ -110,7 +110,13 @@ ol {
 }
 
 .visually-hidden {
-  visibility: hidden;
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .search-form__fieldset {
@@ -147,8 +153,6 @@ ol {
   color: #545050;
 }
 
-
-
 .content__accent::after {
   content: '-';
   display: inline-block;
@@ -181,8 +185,24 @@ ol {
 .content__video-card-description-container {
   width: 200px;
 }
+
 .more-button {
   margin-top: 30px;
   width: 399px;
   height: 34px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  margin-right: 1.5px;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.search-form__label-text {
+  display: inline-block;
+  
 }
