@@ -208,6 +208,25 @@ ol {
   background-color: transparent;
   border: 1px solid #fff;
   cursor: pointer;
+  position: relative;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  width: 15px; 
+  height: 15px; 
+  background-color: #fff;
+  border: 1px solid #fff; 
+  transform: translate(-50%, -50%);
+  opacity: 0; 
+  transition: opacity 0.2s;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
 }
 
 .search-form__label-text {
@@ -218,4 +237,45 @@ ol {
   display: flex;
   gap: 14px;
   padding-top: 5px;
+}
+
+.search-form__label-text:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.content__list:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.content__list-item:active,
+.content__list-item:focus {
+  background-color: #545050;
+}
+
+.content__video-card:active {
+  text-decoration: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+}
+
+.search-form__label-text:focus {
+  text-decoration: none;
+}
+
+.search-form__textfield:focus {
+  outline-offset: 2px;
+}
+
+.button:focus-within {
+  outline: 1px solid #fff;
+}
+
+.button:active {
+  background-color: #545050;
 }
